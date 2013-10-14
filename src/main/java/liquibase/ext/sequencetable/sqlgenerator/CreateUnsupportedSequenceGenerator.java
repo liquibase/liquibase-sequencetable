@@ -15,18 +15,6 @@ import java.util.List;
 
 
 /**
- * <h3>General Information</h3>
- * <p>The main purpose of the genericSequence extension is to be able to use
- * Hibernate's SequenceStyleGenerator as a database-independent way of creating IDs for tables.
- * <p>For more details please read the according section in the Hibernate userguide (5.1.5. Enhanced identifier generators)
- * <h3>Special Information</h3>
- * <p>This Change creates depending on the used DBMS {@link Database} and depending whether it
- * supports Sequences or not either a {@link CreateSequenceStatement} or {@link CreateTableStatement}.
- *
- * @author m.oberwasserlechner@mum-software.com
- */
-
-/**
  * Transparently converts dropSequence calls to dropSequenceTable calls
  */
 public class CreateUnsupportedSequenceGenerator extends CreateSequenceGenerator {
