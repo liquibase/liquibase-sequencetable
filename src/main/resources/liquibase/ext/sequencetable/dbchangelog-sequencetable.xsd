@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.liquibase.org/xml/ns/ext/sequencetable"
+            xmlns="http://www.liquibase.org/xml/ns/ext/sequencetable"
+            elementFormDefault="qualified">
+
+    <xsd:element name="createSequenceTable">
+        <xsd:complexType>
+            <xsd:attribute name="catalogName" type="xsd:string"/>
+            <xsd:attribute name="schemaName" type="xsd:string"/>
+            <xsd:attribute name="tableName" type="xsd:string" use="required"/>
+            <xsd:attribute name="startValue" type="xsd:integer" default="1"/>
+            <xsd:attribute name="alwaysUse" type="xsd:boolean" default="false"/>
+            <xsd:attribute name="nextValueColumnName" type="xsd:string" default="next_value"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="dropSequenceTable">
+        <xsd:complexType>
+            <xsd:attribute name="catalogName" type="xsd:string"/>
+            <xsd:attribute name="schemaName" type="xsd:string"/>
+            <xsd:attribute name="tableName" type="xsd:string" use="required"/>
+            <xsd:attribute name="alwaysUse" type="xsd:boolean" default="false"/>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
