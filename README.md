@@ -9,7 +9,7 @@ Download the extension jar from the [project releases tab](https://github.com/li
 
 ### More Information
 
-For more information, see the [project wiki](https://github.com/liquibase/liquibase-sequencetable/releases)
+For more information, see the [project wiki](https://github.com/liquibase/liquibase-sequencetable/wiki)
 
 ### Issue Tracking
 

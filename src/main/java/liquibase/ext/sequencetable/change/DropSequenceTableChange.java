@@ -1,15 +1,16 @@
 package liquibase.ext.sequencetable.change;
 
 import liquibase.change.AbstractChange;
+import liquibase.change.ChangeMetaData;
+import liquibase.change.DatabaseChange;
 import liquibase.database.Database;
-import liquibase.datatype.core.BigIntType;
 import liquibase.statement.SqlStatement;
-import liquibase.statement.core.CreateTableStatement;
 import liquibase.statement.core.DropTableStatement;
-import liquibase.statement.core.InsertStatement;
 
-import java.math.BigInteger;
 
+@DatabaseChange(name="dropSequenceTable",
+description = "Drop the table used to generate sequence values if the database does not support sequences",
+priority = ChangeMetaData.PRIORITY_DEFAULT)
 public class DropSequenceTableChange extends AbstractChange {
 
     private String catalogName;
